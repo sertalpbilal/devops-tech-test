@@ -24,7 +24,7 @@ For the development of the scripts you have 4 hours and are allowed to use Googl
 - In addition, the database version table is updated after the script execution with the executed script's number
 - Your script will be executed automatically via a program, and must satisfy these command line input parameters exactly in order to run:
   - `./db-upgrade.your-lang directory-with-sql-scripts username-for-the-db db-host db-name db-password`
-  - Example (bash): `./db-upgrade.sh dbscripts myUser myDbServer techTestDB SuperSecretPassword1!`
+  - Example (bash): `python3 /submissionscript/db_upgrade.py /scripts/ dev mysql_container devopstt 123456`
 
 ### Requirements
 
@@ -96,7 +96,7 @@ docker exec -it exec_container /bin/bash
 Run your script using
 
 ```sh
-/submissionscript/<yourscript.lang> /scripts/ dev mysql_container devopstt 123456`
+python3 /submissionscript/db_upgrade.py /scripts/ dev mysql_container devopstt 123456
 ```
 
 You can then run the automated test to check if successful
